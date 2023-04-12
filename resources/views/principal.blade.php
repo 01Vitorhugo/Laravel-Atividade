@@ -14,8 +14,8 @@
         <li><a href="{{ route ('site.coordEnsFun1')}}">Coodenadoria de Ensino Fundamental I</a></li>
         <li><a href="{{ route ('site.coordEnsFun2')}}">Coodenadoria de Ensino Fundamental II</a></li>
         <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="{{ route ('site.GestaoEsc')}}">Coordenadoria de Gestão Escolar</a></li>
+        <li><a href="{{ route ('site.GestaoValor')}}">Coordenadoria de Gestão de Valorização de Pessoas</a></li>
         <li></li>
         <li></li>
         <li></li>

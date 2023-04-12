@@ -7,10 +7,20 @@ use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\EnsFun1Controller;
 use App\Http\Controllers\EnsFun2Controller;
 use App\Http\Controllers\CelEnsFun1Controller;
+use App\Http\Controllers\CelPesquisaController;
+use App\Http\Controllers\CelApoioController;
+use App\Http\Controllers\CelSuperintendenciaController;
+use App\Http\Controllers\CelServicosController;
+use App\Http\Controllers\CelPagamentosController;
+use App\Http\Controllers\CelAcompanhamentoController;
 use App\Http\Controllers\CelPrjVidaController;
 use App\Http\Controllers\CelTempoIntegralController;
 use App\Http\Controllers\CelEdEspController;
 use App\Http\Controllers\CelEdJvController;
+use App\Http\Controllers\ComunicacaoController;
+use App\Http\Controllers\GestaoEscController;
+use App\Http\Controllers\GestaoValorController;
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +51,18 @@ Route::get('/coordEnsFun1/celEdJv', [CelEdJvController::class,'index'])->name('s
 Route::get('/coordEnsFun2', [EnsFun2Controller::class,'index'])->name('site.coordEnsFun2');
 Route::get('/coordEnsFun2/celProjVida', [CelPrjVidaController::class,'index'])->name('site.coordEnsFun2.celProjVida');
 Route::get('/coordEnsFun2/celTempoIntegral', [CelTempoIntegralController::class,'index'])->name('site.coordEnsFun2.celTmpInt');
+
+//Rotas Coordoria de Gestão Escolar
+Route::get('/coordGestaoEsc', [GestaoEscController::class, 'index'])->name('site.GestaoEsc');
+Route::get('/coordGestaoEsc/celPesquisa', [CelPesquisaController::class, 'index'])->name('site.GestaoEsc.celPesquisa');
+Route::get('/coordGestaoEsc/celApoio', [CelApoioController::class, 'index'])->name('site.GestaoEsc.celApoio');
+Route::get('/coordGestaoEsc/celSuperintendecia', [CelSuperintendenciaController::class, 'index'])->name('site.GestaoEsc.celSuperintendencia');
+Route::get('/coordGestaoEsc/celServicos', [CelServicosController::class, 'index'])->name('site.GestaoEsc.celServicos');
+
+//Rotas Coordenadoria de Gestão de Valorização de Pessoas
+Route::get('/coordGestaoValor', [GestaoValorController::class, 'index'])->name('site.GestaoValor');
+Route::get('/coordGestaoValor/celPagamentos', [CelPagamentosController::class, 'index'])->name('site.GestaoValor.celPagamentos');
+Route::get('/coordGestaoValor/celAcompanhamento', [CelAcompanhamentoController::class, 'index'])->name('site.GestaoValor.celAcompanhamento');
+
+//Rotas Coordenadoria de Comunicação e Tecnologia da Informação
+Route::get('/coordComunicacao', [ComunicacaoController::class, 'index'])->name('site.coordComunicacao');
