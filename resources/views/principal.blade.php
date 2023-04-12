@@ -13,11 +13,11 @@
         <li><a href="{{ route ('site.coordInfantil')}}">Coodenadoria da Educação Infantil</a></li>
         <li><a href="{{ route ('site.coordEnsFun1')}}">Coodenadoria de Ensino Fundamental I</a></li>
         <li><a href="{{ route ('site.coordEnsFun2')}}">Coodenadoria de Ensino Fundamental II</a></li>
-        <li></li>
+        <li><a href="{{ route ('site.coordDesenvolvimento')}}">Coordenadoria de Desenvolvimento da Aprendizagem e da Gestão Pedagógica</a></li>
         <li><a href="{{ route ('site.GestaoEsc')}}">Coordenadoria de Gestão Escolar</a></li>
         <li><a href="{{ route ('site.GestaoValor')}}">Coordenadoria de Gestão de Valorização de Pessoas</a></li>
-        <li></li>
-        <li></li>
+        <li><a href="{{ route ('site.coordComunicacao')}}">Coordenadoria de Comunicação e Tecnologia da Informação</a></li>
+        <li><a href="{{ route ('site.coordAdministrativa')}}">Coordenadoria Administrativa</a></li>
         <li></li>
         <li></li>
     </ul>

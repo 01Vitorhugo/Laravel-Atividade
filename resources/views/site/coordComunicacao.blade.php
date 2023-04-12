@@ -10,7 +10,7 @@
     <h1>Coordenadoria de Comunicação e Tecnologia da Informação</h1>
     <nav>
         <ul>
-            <li></li>
+            <li><a href="{{ route('site.coordComunicacao.celDesenvolvimento')}}">Célula de Desenvolvimento e Suporte</a></li>
         </ul>
     </nav>
 </body>

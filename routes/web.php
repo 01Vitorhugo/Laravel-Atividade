@@ -17,9 +17,21 @@ use App\Http\Controllers\CelPrjVidaController;
 use App\Http\Controllers\CelTempoIntegralController;
 use App\Http\Controllers\CelEdEspController;
 use App\Http\Controllers\CelEdJvController;
+use App\Http\Controllers\CelAvaliacaoController;
+use App\Http\Controllers\CelCompetenciasController;
+use App\Http\Controllers\CelMedicaoController;
+use App\Http\Controllers\CelSupervisaoController;
+use App\Http\Controllers\CelTutoriaController;
+use App\Http\Controllers\CelDesenvolvimentoController;
+use App\Http\Controllers\CelLogisticaController;
+use App\Http\Controllers\CelTransporteController;
+use App\Http\Controllers\CelAlimentacaoController;
+use App\Http\Controllers\CelObrasController;
 use App\Http\Controllers\ComunicacaoController;
 use App\Http\Controllers\GestaoEscController;
 use App\Http\Controllers\GestaoValorController;
+use App\Http\Controllers\DesenvolvimentoController;
+use App\Http\Controllers\AdministracaoController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
@@ -47,10 +59,19 @@ Route::get('/coordEnsFun1/celEnsFun1', [CelEnsFun1Controller::class,'index'])->n
 Route::get('/coordEnsFun1/celEdEsp', [CelEdEspController::class,'index'])->name('site.coordEnsFun1.celEdEsp');
 Route::get('/coordEnsFun1/celEdJv', [CelEdJvController::class,'index'])->name('site.coordEnsFun1.celEdJv');
 
-//Rotas Coordenação Ensino Fundamental I
+//Rotas Coordenação Ensino Fundamental II
 Route::get('/coordEnsFun2', [EnsFun2Controller::class,'index'])->name('site.coordEnsFun2');
 Route::get('/coordEnsFun2/celProjVida', [CelPrjVidaController::class,'index'])->name('site.coordEnsFun2.celProjVida');
 Route::get('/coordEnsFun2/celTempoIntegral', [CelTempoIntegralController::class,'index'])->name('site.coordEnsFun2.celTmpInt');
+
+//Rotas Coordenação de Desenvolvimento da Aprendizagem e da Gestão Pedagógica
+Route::get('/coordDesenvolvimento', [DesenvolvimentoController::class,'index'])->name('site.coordDesenvolvimento');
+Route::get('/coordDesenvolvimento/AcompanhamentoPedagogico', [celAcompanhamentoController::class,'index'])->name('site.coordDesenvolvimento.celAcompanhamento');
+Route::get('/coordDesenvolvimento/AvaliacaoEducacional', [CelAvaliacaoController::class,'index'])->name('site.coordDesenvolvimento.celAvaliacao');
+Route::get('/coordDesenvolvimento/CompetenciasSocioemocionais', [CelCompetenciasController::class,'index'])->name('site.coordDesenvolvimento.celCompSoc');
+Route::get('/coordDesenvolvimento/Medicao', [CelMedicaoController::class,'index'])->name('site.coordDesenvolvimento.celMedicao');
+Route::get('/coordDesenvolvimento/Supervisao', [CelSupervisaoController::class,'index'])->name('site.coordDesenvolvimento.celSupervisao');
+Route::get('/coordDesenvolvimento/Tutoria', [CelTutoriaController::class,'index'])->name('site.coordDesenvolvimento.celTutoria');
 
 //Rotas Coordoria de Gestão Escolar
 Route::get('/coordGestaoEsc', [GestaoEscController::class, 'index'])->name('site.GestaoEsc');
@@ -66,3 +87,11 @@ Route::get('/coordGestaoValor/celAcompanhamento', [CelAcompanhamentoController::
 
 //Rotas Coordenadoria de Comunicação e Tecnologia da Informação
 Route::get('/coordComunicacao', [ComunicacaoController::class, 'index'])->name('site.coordComunicacao');
+Route::get('/coordComunicacao/celDesenvolvimento', [CelDesenvolvimentoController::class, 'index'])->name('site.coordComunicacao.celDesenvolvimento');
+
+//Rotas Coordenadoria Administrativa
+Route::get('/coordAdministrativa', [AdministracaoController::class, 'index'])->name('site.coordAdministrativa');
+Route::get('/coordAdministrativa/celLogistica', [CelLogisticaController::class, 'index'])->name('site.coordAdministrativa.celLogistica');
+Route::get('/coordAdministrativa/celTransporte', [CelTransporteController::class, 'index'])->name('site.coordAdministrativa.celTransporte');
+Route::get('/coordAdministrativa/celAlimentacao', [CelAlimentacaoController::class, 'index'])->name('site.coordAdministrativa.celAlimentacao');
+Route::get('/coordAdministrativa/celObras', [CelObrasController::class, 'index'])->name('site.coordAdministrativa.celObras');
