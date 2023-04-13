@@ -18,8 +18,8 @@
         <li><a href="{{ route ('site.GestaoValor')}}">Coordenadoria de Gestão de Valorização de Pessoas</a></li>
         <li><a href="{{ route ('site.coordComunicacao')}}">Coordenadoria de Comunicação e Tecnologia da Informação</a></li>
         <li><a href="{{ route ('site.coordAdministrativa')}}">Coordenadoria Administrativa</a></li>
-        <li></li>
-        <li></li>
+        <li><a href="{{ route ('site.coordJuridica')}}">Coordenadoria Jurídica</a></li>
+        <li><a href="{{ route ('site.coordFinanceira')}}">Coordenadoria Financeira</a></li>
     </ul>
     </nav>
 </body>

@@ -27,11 +27,20 @@ use App\Http\Controllers\CelLogisticaController;
 use App\Http\Controllers\CelTransporteController;
 use App\Http\Controllers\CelAlimentacaoController;
 use App\Http\Controllers\CelObrasController;
+use App\Http\Controllers\CelApoioAdmController;
+use App\Http\Controllers\CelContratosController;
+use App\Http\Controllers\CelProcessosController;
+use App\Http\Controllers\CelControleController;
+use App\Http\Controllers\CelContabilidadeController;
+use App\Http\Controllers\CelContasController;
+use App\Http\Controllers\CelPlanejamentoController;
 use App\Http\Controllers\ComunicacaoController;
 use App\Http\Controllers\GestaoEscController;
 use App\Http\Controllers\GestaoValorController;
 use App\Http\Controllers\DesenvolvimentoController;
 use App\Http\Controllers\AdministracaoController;
+use App\Http\Controllers\FinanceiroController;
+use App\Http\Controllers\JuridicaController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
@@ -95,3 +104,16 @@ Route::get('/coordAdministrativa/celLogistica', [CelLogisticaController::class, 
 Route::get('/coordAdministrativa/celTransporte', [CelTransporteController::class, 'index'])->name('site.coordAdministrativa.celTransporte');
 Route::get('/coordAdministrativa/celAlimentacao', [CelAlimentacaoController::class, 'index'])->name('site.coordAdministrativa.celAlimentacao');
 Route::get('/coordAdministrativa/celObras', [CelObrasController::class, 'index'])->name('site.coordAdministrativa.celObras');
+
+//Rotas Coordenadoria Jurídica
+Route::get('/coordJuridica', [JuridicaController::class, 'index'])->name('site.coordJuridica');
+Route::get('/coordJuridica/celApoioAdm', [CelApoioAdmController::class, 'index'])->name('site.coordJuridica.celApoioAdm');
+Route::get('/coordJuridica/celContratos', [CelContratosController::class, 'index'])->name('site.coordJuridica.celContratos');
+Route::get('/coordJuridica/celProcessos', [CelProcessosController::class, 'index'])->name('site.coordJuridica.celProcessos');
+Route::get('/coordJuridica/celControle', [CelControleController::class, 'index'])->name('site.coordJuridica.celControle');
+
+//Rotas Coordenadoria Financeira
+Route::get('/coordFinanceira', [FinanceiroController::class, 'index'])->name('site.coordFinanceira');
+Route::get('/coordFinanceira/celContabilidade', [CelContabilidadeController::class, 'index'])->name('site.coordFinanceira.celContabilidade');
+Route::get('/coordFinanceira/celContas', [CelContasController::class, 'index'])->name('site.coordFinanceira.celContas');
+Route::get('/coordFinanceira/celPlanejamento', [CelPlanejamentoController::class, 'index'])->name('site.coordFinanceira.celPlanejamento');
