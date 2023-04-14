@@ -55,6 +55,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Rota Raiz
 Route::get('/', [PrincipalController::class,'index']);
 
 //Rotas Coordenação Infantil
